@@ -2,12 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --main-color: #3BACB6;
+  --hover-color: #2e848b;
   --background-color: #E5E5E5;
   --white: #fff;
   --black: #000;
   --gray: #96999B;
   --heads: #4D6D6E;
-  --transtion: 0.3;
+  --transtion: 0.3s;
 }
 
 body {
@@ -15,29 +16,42 @@ body {
   background: var(--background-color);
 }
 
-.container {
-  /* Padding for mobile view */
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 111px;
+.main-title {
+  background: var(--heads);
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+.main-title h2 {
+  padding: 20px 0;
+  text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+.top-selling .container .boxes .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 230px !important;
+  height: 340px !important;
 }
-/* Medium */
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+.top-selling .container .boxes .card img {
+  width: 150px;
+  height: 200px;
 }
-/* Large */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170;
-  }
+.top-selling .container .boxes .card .card-body a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: normal;
+  transition: var(--transtion);
+}
+.top-selling .container .boxes .card .card-body a:hover {
+  color: var(--hover-color);
+}
+.top-selling .container .boxes .card .card-body .info-sell a {
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: var(--transtion);
+}
+.top-selling .container .boxes .card .card-body .info-sell a:hover {
+  color: var(--hover-color);
 }/*# sourceMappingURL=style.css.map */

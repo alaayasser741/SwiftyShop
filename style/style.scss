@@ -3,43 +3,76 @@
 
 :root {
     --main-color: #3BACB6;
+    --hover-color: #2e848b;
     --background-color: #E5E5E5;
     --white: #fff;
     --black: #000;
     --gray: #96999B;
     --heads: #4D6D6E;
-    --transtion: 0.3;
+    --transtion: 0.3s;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     background: var(--background-color);
     // font-family: 'Cairo', sans-serif;
 }
-.container {
-    /* Padding for mobile view */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 111px;
-}
 
-@media (min-width:768px) {
-    .container {
-        width: 750px;
+// Main Title
+.main-title {
+    background: var(--heads);
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+
+    h2 {
+        padding: 20px 0;
+        text-transform: uppercase;
     }
 }
 
-/* Medium */
-@media (min-width:992px) {
+// Top Selling Style
+.top-selling {
     .container {
-        width: 970px;
-    }
-}
+        .boxes {
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                cursor: grab;
+                width: 230px !important;
+                height: 340px !important;
 
-/* Large */
-@media (min-width:1200px) {
-    .container {
-        width: 1170;
+                img {
+                    width: 150px;
+                    height: 200px;
+                }
+
+                .card-body {
+                    a {
+                        text-decoration: none;
+                        color: var(--black);
+                        font-weight: normal;
+                        transition: var(--transtion);
+
+                        &:hover {
+                            color: var(--hover-color);
+                        }
+                    }
+
+                    .info-sell {
+                        a {
+
+                            font-size: 2rem;
+                            color: var(--main-color);
+                            transition: var(--transtion);
+
+                            &:hover {
+                                color: var(--hover-color);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }
