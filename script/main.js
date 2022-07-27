@@ -23,8 +23,5 @@ var swiper = new Swiper(".boxes", {
         1024: {
             slidesPerView: 4,
         },
-        1446: {
-            slidesPerView: 5,
-        },
     },
 });

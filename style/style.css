@@ -27,6 +27,13 @@ body {
   text-transform: uppercase;
 }
 
+.top-selling .container .boxes .main-title {
+  text-align: left;
+  padding-left: 20px;
+}
+.top-selling .container .boxes .main-title h2 {
+  font-size: 1.2rem;
+}
 .top-selling .container .boxes .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: -webkit-grab;
@@ -54,4 +61,80 @@ body {
 }
 .top-selling .container .boxes .card .card-body .info-sell a:hover {
   color: var(--hover-color);
+}
+
+.freeShopping .container .background {
+  position: relative;
+  height: 400px;
+  background-color: var(--gray);
+}
+.freeShopping .container .background .freeBanar {
+  width: 100%;
+  height: 400px;
+  background-color: var(--white);
+  -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 55% 100%);
+          clip-path: polygon(90% 0, 100% 0, 100% 100%, 55% 100%);
+}
+.freeShopping .container .background img {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 360px;
+}
+.freeShopping .container .background .text {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  text-align: center;
+}
+.freeShopping .container .background .text h2 {
+  font-size: 4rem;
+}
+.freeShopping .container .background .text p {
+  font-size: 3rem;
+}
+@media (max-width: 991px) {
+  .freeShopping .container .background .text h2 {
+    font-size: 2rem;
+  }
+  .freeShopping .container .background .text p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 786px) {
+  .freeShopping .container .background .text .text {
+    text-align: left !important;
+  }
+  .freeShopping .container .background .text h2 {
+    font-size: 1.5rem;
+  }
+  .freeShopping .container .background .text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .freeShopping .container .background {
+    height: 260px;
+  }
+  .freeShopping .container .background .freeBanar {
+    height: 260px;
+  }
+  .freeShopping .container .background img {
+    right: 0;
+    width: 230px;
+  }
+}
+@media (max-width: 786px) {
+  .freeShopping .container .background {
+    height: 200px;
+  }
+  .freeShopping .container .background .freeBanar {
+    height: 200px;
+  }
+  .freeShopping .container .background img {
+    width: 160px;
+  }
 }/*# sourceMappingURL=style.css.map */
