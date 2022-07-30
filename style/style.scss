@@ -12,6 +12,10 @@
     --transtion: 0.3s;
 }
 
+* {
+    user-select: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--background-color);
@@ -28,58 +32,62 @@ body {
     h2 {
         padding: 20px 0;
         text-transform: uppercase;
+
+        span {
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
     }
 }
 
-// Top Selling Style
-.top-selling {
-    .container {
-        .boxes {
-            .main-title {
-                text-align: left;
-                padding-left: 20px;
+// Top Selling Style (Slider Style)
+.container {
+    .boxes {
+        .main-title {
+            text-align: left;
+            padding-left: 20px;
 
-                h2 {
-                    font-size: 1.2rem;
-                }
-
+            h2 {
+                font-size: 1.2rem;
             }
 
-            .card {
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                cursor: grab;
-                width: 230px !important;
-                height: 340px !important;
+        }
 
-                img {
-                    width: 150px;
-                    height: 200px;
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            cursor: grab;
+            width: 230px !important;
+            height: 340px !important;
+
+            img {
+                width: 150px;
+                height: 200px;
+            }
+
+            .card-body {
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-weight: normal;
+                    transition: var(--transtion);
+
+                    &:hover {
+                        color: var(--hover-color);
+                    }
                 }
 
-                .card-body {
+                .info-sell {
                     a {
-                        text-decoration: none;
-                        color: var(--black);
-                        font-weight: normal;
+
+                        font-size: 2rem;
+                        color: var(--main-color);
                         transition: var(--transtion);
 
                         &:hover {
                             color: var(--hover-color);
                         }
-                    }
 
-                    .info-sell {
-                        a {
-
-                            font-size: 2rem;
-                            color: var(--main-color);
-                            transition: var(--transtion);
-
-                            &:hover {
-                                color: var(--hover-color);
-                            }
-
-                        }
                     }
                 }
             }
@@ -87,59 +95,65 @@ body {
     }
 }
 
-// Free Shopping 
-.freeShopping {
-    .container {
-        .background {
-            position: relative;
+// Free Shopping {
+.container {
+    .background {
+        position: relative;
+        height: 400px;
+        background-color: var(--gray);
+
+        .freeBanar {
+            width: 100%;
             height: 400px;
-            background-color: var(--gray);
+            background-color: var(--white);
+            clip-path: polygon(90% 0, 100% 0, 100% 100%, 55% 100%);
+        }
 
-            .freeBanar {
-                width: 100%;
-                height: 400px;
-                background-color: var(--white);
-                clip-path: polygon(90% 0, 100% 0, 100% 100%, 55% 100%);
+        img {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            width: 360px;
+        }
+
+        .text {
+            position: absolute;
+            left: 30%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            text-align: center;
+
+            h2 {
+                font-size: 3.5rem;
             }
 
-            img {
-                position: absolute;
-                top: 0;
-                right: 10px;
-                width: 360px;
+            p {
+                font-size: 2.5rem;
             }
 
-            .text {
-                position: absolute;
-                left: 30%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                color: var(--white);
-                text-align: center;
-                h2{
-                    font-size: 4rem;
+
+            @media (max-width:991px) {
+                h2 {
+                    font-size: 2rem;
                 }
-                p{
-                    font-size: 3rem;
+
+                p {
+                    font-size: 1.5rem
                 }
-                @media (max-width:991px) {
-                    h2{
-                        font-size: 2rem;
-                    }
-                    p{
-                        font-size: 1.5rem
-                    }
+            }
+
+            @media (max-width:786px) {
+                .text {
+                    text-align: left !important;
                 }
-                @media (max-width:786px) {
-                    .text{
-                        text-align: left !important;
-                    }
-                    h2{
-                        font-size: 1.5rem;
-                    }
-                    p{
-                        font-size: 1rem
-                    }
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem
                 }
             }
         }
@@ -147,19 +161,34 @@ body {
 }
 
 @media (max-width:991px) {
-    .freeShopping {
-        .container {
-            .background {
+    .container {
+        .background {
+            height: 260px;
+
+            .freeBanar {
                 height: 260px;
+            }
 
-                .freeBanar {
-                    height: 260px;
-                }
+            img {
+                right: 0;
+                width: 230px;
+            }
+        }
+    }
+}
 
-                img {
-                    right: 0;
-                    width: 230px;
-                }
+@media (max-width:1199px) {
+    .freeShopping {
+        .background {
+            height: 300px;
+
+            .freeBanar {
+                height: 300px;
+            }
+
+            img {
+                right: 40px;
+                width: 270px;
             }
         }
     }
@@ -177,6 +206,271 @@ body {
 
                 img {
                     width: 160px;
+                }
+            }
+        }
+    }
+}
+
+// DealBox
+.dealbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+    gap: 20px;
+
+    .background:nth-child(1),
+    .background:nth-child(4) {
+        background-color: var(--main-color);
+    }
+
+    .background {
+        height: 260px;
+        overflow: hidden;
+
+        .text {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+        }
+
+        .freeBanar {
+            height: 260px;
+        }
+
+        img {
+            width: 200px;
+            right: 10%;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+
+        img[alt="Shoes"] {
+            width: 430px;
+            right: -80px;
+        }
+
+        img[alt="hairOil"] {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .dealbox {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        gap: 5px;
+
+        // gap: 10px;
+        .background:nth-child(4) {
+            background-color: var(--gray);
+        }
+
+        .background:nth-child(odd) {
+            background-color: var(--main-color);
+        }
+
+        img[alt="Shoes"] {
+            right: -45px !important;
+        }
+
+        img[alt="hairOil"] {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .dealbox {
+
+        .background {
+            height: 200px;
+
+            .freeBanar {
+                height: 200px;
+            }
+
+            .text {
+                h2 {
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+
+            img {
+                width: 150px;
+                right: 10px;
+            }
+
+            img[alt="Shoes"] {
+                width: 300px;
+                right: -60px !important;
+                top: 120px;
+            }
+
+            img[alt="hairOil"] {
+                width: 100px !important;
+            }
+        }
+    }
+}
+
+.freeBanar img {
+    width: 20px !important;
+}
+
+// Top Deals
+.top-deals {
+    .main-title {
+        text-align: left;
+        padding-left: 20px;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// summur deals
+.summur-deals {
+    .title {
+        position: absolute;
+        font-size: 2rem;
+        color: var(--white);
+        font-weight: 600;
+        line-height: 1.1;
+        left: 30px;
+        top: 30px;
+    }
+
+    .background {
+        background-color: var(--main-color);
+
+        .freeBanar {
+            img[alt="freeShoppingLow"] {
+                display: none;
+            }
+        }
+
+        .text {
+            margin-top: 30px;
+
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 3rem;
+
+                span {
+                    font-size: 4rem;
+                    font-weight: 700;
+
+                }
+            }
+        }
+
+        img {
+            right: 50px;
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .summur-deals {
+        .background {
+            height: 300px;
+
+            .freeBanar {
+                height: 300px;
+            }
+
+            img {
+                right: 30px;
+                width: 400px;
+            }
+
+            h2 {
+                font-size: 2.4rem !important;
+            }
+
+            p {
+                font-size: 2rem !important;
+
+                span {
+                    font-size: 3rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .summur-deals {
+        overflow: hidden;
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .background {
+            img{
+                display: none;
+            }
+            .freeBanar{
+                img[alt="freeShoppingLow"]{
+                    display: unset;
+                    top: -30px;
+                    right: -150px;
+                    width: 100% !important;
+                    width: 500px !important;
+                }
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            p {
+                font-size: 2rem !important;
+
+                span {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:786px) {
+    .summur-deals {
+        .background {
+            .text{
+                margin-left: 15px;
+            }
+            img {
+                top: 50px;
+                right: 0;
+                width: 200px;
+            }
+            
+            h2 {
+                font-size: 1.4rem !important;
+            }
+            
+            p {
+                font-size: 1rem !important;
+                
+                span {
+                    font-size: 2rem !important;
                 }
             }
         }
