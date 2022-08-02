@@ -140,6 +140,66 @@
     }
 }
 
+// Third 
+.sd-three {
+    .background {
+        img {
+            top: 40px;
+            right: 50px;
+            width: 550px;
+        }
+    }
+
+    @media (max-width:1199px) {
+
+        .background {
+            img {
+                top: 40px;
+                right: 0;
+                width: 430px;
+            }
+        }
+
+    }
+
+    @media (max-width:991px) {
+
+        .background {
+            img {
+                display: unset;
+                right: -10px;
+                width: 400px;
+            }
+
+            .freeBanar {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+
+        @media (max-width:786px) {
+
+            .background {
+                img {
+                    display: none;
+                }
+
+                .freeBanar {
+                    img {
+                        display: unset;
+                        top: 0;
+                        right: -160px;
+                        width: 400px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 // second 
 .sd-two {
     .background {
@@ -167,11 +227,12 @@
     @media (max-width:991px) {
 
         .background {
-            img{
+            img {
                 display: unset;
                 right: -140px;
                 width: 450px;
             }
+
             .freeBanar {
                 img {
                     display: none;
@@ -179,23 +240,24 @@
             }
         }
 
-        
-    @media (max-width:786px) {
 
-        .background {
-            img {
-                display: none;
-            }
-            .freeBanar {
+        @media (max-width:786px) {
+
+            .background {
                 img {
-                    display: unset;
-                    top: 10px;
-                    right: -270px;
-                    width: 450px !important;
+                    display: none;
+                }
+
+                .freeBanar {
+                    img {
+                        display: unset;
+                        top: 10px;
+                        right: -270px;
+                        width: 450px !important;
+                    }
                 }
             }
-        }
 
+        }
     }
-}
 }
