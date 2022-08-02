@@ -25,3 +25,4 @@ var swiper = new Swiper(".boxes", {
         },
     },
 });
+AOS.init();
