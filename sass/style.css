@@ -445,6 +445,14 @@
     right: -40px !important;
   }
 }
+@media (max-width: 786px) {
+  .more .background img {
+    width: 150px !important;
+  }
+  .more .background:first-child img {
+    width: 180px !important;
+  }
+}
 
 body {
   font-family: "Roboto", sans-serif;

@@ -22,4 +22,16 @@
             }
         }
     }
+    @media (max-width:786px) {
+        .background{
+            img{
+                width: 150px !important;
+            }
+        }
+        .background:first-child{
+            img{
+                width: 180px !important;
+            }
+        }
+    }
 }
