@@ -3,17 +3,16 @@
 @import './config/variables';
 @import './base/base';
 @import './components/header',
-'./components/header',
 './components/home',
 './components/menu',
 './components/freeShopping',
 './components/amazingDeals',
 './components/topDeal',
 './components/summerSale',
-'./components/moreDeals';
+'./components/moreDeals',
+'./components/menu-item',
+'./components/footer';
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: var(--background-color);
-    // font-family: 'Cairo', sans-serif;
-}
+
+
+
